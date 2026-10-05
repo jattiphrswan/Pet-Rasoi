@@ -1,109 +1,93 @@
-"use client";
-
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { SITE_IMAGES } from "@/lib/images";
 
 export function Hero() {
-  const slides = SITE_IMAGES.hero.slides;
-  const [current, setCurrent] = useState(0);
-
   const perks = [
-    { icon: "🥩", title: "Real Whole Meat", desc: "Human-grade chicken & fish" },
+    { icon: "🥩", title: "Human-Grade Meat", desc: "Real chicken, mutton & fish" },
     { icon: "⚡", title: "Ready in 10s", desc: "Zero cooking, open & serve" },
     { icon: "🥣", title: "Steam-Cooked Fresh", desc: "Locks in bio-vitamins" },
     { icon: "🩺", title: "Vet Formulated", desc: "Balanced daily nutrition" },
   ];
 
-  const activeSlide = slides[current];
-
   return (
-    <section className="relative overflow-hidden border-b border-border bg-gradient-to-b from-cream via-cream to-cream-surface pt-10 pb-16 px-4 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
-        {/* Main Grid: Left copy, Right 3-slide visual showcase */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          {/* Left Text Column */}
-          <div className="lg:col-span-6 text-center lg:text-left">
-            <span className="inline-block rounded-full border border-sage-border bg-sage-light px-4 py-1 text-xs font-semibold text-sage-dark">
-              {activeSlide.badge}
-            </span>
+    <section className="border-b border-border bg-gradient-to-b from-cream via-cream to-cream-surface">
+      {/* Main Banner Showcase */}
+      <div className="mx-auto max-w-7xl px-4 pt-8 pb-12 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-3xl border border-border bg-white shadow-card">
+          <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
+            
+            {/* Left Content Column */}
+            <div className="lg:col-span-6 p-6 sm:p-10 lg:p-12 z-10">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-sage-border bg-sage-light px-3.5 py-1 text-xs font-semibold text-sage-dark">
+                <span>🍲 Ghar Ka Khana For Your Pet • Ready to Serve</span>
+              </span>
 
-            <h1 className="mt-4 font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink leading-tight transition-all duration-300">
-              {activeSlide.title}
-            </h1>
+              <h1 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink leading-tight">
+                Wholesome pet food, <br />
+                <span className="text-sage-dark italic">ready in seconds.</span>
+              </h1>
 
-            <p className="mt-4 text-base sm:text-lg text-ink-muted max-w-xl mx-auto lg:mx-0 leading-relaxed transition-all duration-300">
-              {activeSlide.subtitle}
-            </p>
+              <p className="mt-4 text-sm sm:text-base text-ink-muted leading-relaxed max-w-lg">
+                Gently steam-cooked, 100% human-grade meals for dogs, cats, and birds.
+                Zero meal prep, zero defrosting—just tear open, pour into their dish, and serve.
+              </p>
 
-            <div className="mt-7 flex flex-wrap justify-center lg:justify-start gap-3">
-              <Link
-                href="#dog-meals"
-                className="rounded-lg bg-sage-dark px-6 py-3 text-sm font-semibold text-white shadow-subtle hover:bg-sage transition"
-              >
-                See Dog Food
-              </Link>
-              <Link
-                href="#cat-meals"
-                className="rounded-lg border border-border bg-white px-6 py-3 text-sm font-semibold text-ink shadow-subtle hover:bg-cream-surface transition"
-              >
-                See Cat Food
-              </Link>
-            </div>
-          </div>
+              {/* Category Quick Links */}
+              <div className="mt-6 flex flex-wrap gap-2 text-xs font-semibold">
+                <Link
+                  href="#dog-meals"
+                  className="rounded-full border border-border bg-cream px-3 py-1 text-ink hover:border-sage-dark hover:text-sage-dark transition"
+                >
+                  🐕 Dog Food
+                </Link>
+                <Link
+                  href="#cat-meals"
+                  className="rounded-full border border-border bg-cream px-3 py-1 text-ink hover:border-sage-dark hover:text-sage-dark transition"
+                >
+                  🐈 Cat Food
+                </Link>
+                <Link
+                  href="#shop"
+                  className="rounded-full border border-border bg-cream px-3 py-1 text-ink hover:border-sage-dark hover:text-sage-dark transition"
+                >
+                  🦜 Bird Food
+                </Link>
+              </div>
 
-          {/* Right Column: 3-Image Hero Section Showcase */}
-          <div className="lg:col-span-6 flex flex-col items-center">
-            <div className="relative w-full max-w-lg aspect-[4/3] rounded-2xl border border-border bg-white overflow-hidden shadow-card">
-              <Image
-                src={activeSlide.src}
-                alt={activeSlide.alt}
-                fill
-                className="object-cover transition-opacity duration-500"
-                priority
-              />
-
-              {/* Slider Controls */}
-              <div className="absolute inset-x-3 bottom-3 flex items-center justify-between pointer-events-none">
-                {/* Dots indicator */}
-                <div className="flex gap-1.5 bg-black/40 backdrop-blur-xs px-2.5 py-1 rounded-full pointer-events-auto">
-                  {slides.map((_, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => setCurrent(idx)}
-                      className={`h-2 rounded-full transition-all ${
-                        current === idx ? "w-6 bg-white" : "w-2 bg-white/60"
-                      }`}
-                      aria-label={`Go to slide ${idx + 1}`}
-                    />
-                  ))}
-                </div>
-
-                {/* Prev / Next Arrows */}
-                <div className="flex gap-1 pointer-events-auto">
-                  <button
-                    onClick={() => setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1))}
-                    className="flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-ink shadow hover:bg-white transition"
-                    aria-label="Previous slide"
-                  >
-                    ‹
-                  </button>
-                  <button
-                    onClick={() => setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1))}
-                    className="flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-ink shadow hover:bg-white transition"
-                    aria-label="Next slide"
-                  >
-                    ›
-                  </button>
-                </div>
+              {/* CTAs */}
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link
+                  href="#shop"
+                  className="rounded-lg bg-sage-dark px-6 py-3 text-sm font-semibold text-white shadow-subtle hover:bg-sage transition"
+                >
+                  Explore Menu
+                </Link>
+                <Link
+                  href="#how-to-serve"
+                  className="rounded-lg border border-border bg-cream px-6 py-3 text-sm font-semibold text-ink shadow-subtle hover:bg-cream-surface transition"
+                >
+                  How to Serve
+                </Link>
               </div>
             </div>
+
+            {/* Right Product Image Banner */}
+            <div className="lg:col-span-6 relative aspect-[16/11] lg:aspect-auto lg:h-[480px] w-full bg-cream-surface">
+              <Image
+                src="/img/petfoodimg/hero section.png"
+                alt="Pet Rasoi Ready to Serve Dog Food, Cat Food and Bird Food Pouches"
+                fill
+                className="object-cover object-right"
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+
           </div>
         </div>
 
-        {/* 4 Feature Badges (GoPet style) */}
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
+        {/* 4 Feature Badges Underneath (GoPet style) */}
+        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
           {perks.map((p, i) => (
             <div key={i} className="rounded-xl border border-border bg-white p-4 shadow-xs">
               <span className="text-2xl">{p.icon}</span>
