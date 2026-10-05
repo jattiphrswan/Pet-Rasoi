@@ -27,17 +27,34 @@ export const SITE_IMAGES = {
     height: 32,
   },
 
-  // Hero section image slots
+  // Hero section image slots (3 slides from user petfoodimg folder)
   hero: {
-    main: {
-      src: "/img/hero_fresh_serving.jpg", // Optional user replacement
-      alt: "Freshly opened ready-to-serve nutritious pet meal bowl",
-    },
-    servingSteps: {
-      step1: "/img/step_open_pouch.jpg",
-      step2: "/img/step_pour_bowl.jpg",
-      step3: "/img/step_serve_pet.jpg",
-    },
+    slides: [
+      {
+        id: 1,
+        src: "/img/petfoodimg/hero section.png",
+        alt: "Pet Rasoi Kitchen Fresh Ready-to-Serve Meals",
+        badge: "✨ Instant, Ready-to-Serve Pet Food",
+        title: "Real food for pets who deserve the best.",
+        subtitle: "Gently steam-cooked, whole-food recipes for dogs and cats. Open, pour, and nourish in 10 seconds.",
+      },
+      {
+        id: 2,
+        src: "/img/petfoodimg/adult-woman-cuddling-her-large-white-dog-2026-09-23-23-30-12-utc.JPG",
+        alt: "Happy dog and pet parent enjoying healthy wholesome meals",
+        badge: "❤️ Loved by Happy Pets & Parents",
+        title: "Wholesome love in every single bowl.",
+        subtitle: "Formulated by veterinary nutritionists with 100% human-grade meats and farm-fresh produce.",
+      },
+      {
+        id: 3,
+        src: "/img/petfoodimg/bowls-of-dry-pet-food-on-purple-backdrop-2026-09-23-22-06-40-utc.jpg",
+        alt: "Nutrient-packed crunchy bowls and slow-baked recipes",
+        badge: "🥣 Zero Hassle • Fresh Daily",
+        title: "Clean nutrition, zero messy kitchen prep.",
+        subtitle: "Naturally sealed for maximum freshness. Perfect balanced portions ready whenever they are hungry.",
+      },
+    ],
   },
 
   // Category imagery
@@ -66,10 +83,14 @@ export const SITE_IMAGES = {
     101: "/img/products/213837d0-2df8-403e-b9a1-fa018ee82fe5.png",
     102: "/img/products/83603585-6e18-43e5-9c52-b765392d479d.png",
     103: "/img/products/dd56b0c0-e37a-487c-89d2-dab5b76606cc.png",
+    104: "/img/products/2c97d212-c8dc-4b1f-83f5-da40086a10f1.png",
+    105: "/img/products/2c97d212-c8dc-4b1f-83f5-da40086a10f1.png",
     106: "/img/products/Pet Rasoi premium fish food pouch-1.png",
     "rasoi-fresh-farm-chicken-brown-rice": "/img/products/213837d0-2df8-403e-b9a1-fa018ee82fe5.png",
     "tender-mutton-sweet-potato-feast": "/img/products/83603585-6e18-43e5-9c52-b765392d479d.png",
     "puppy-growth-nourish-bowl": "/img/products/dd56b0c0-e37a-487c-89d2-dab5b76606cc.png",
+    "senior-canine-vitality-turmeric-stew": "/img/products/2c97d212-c8dc-4b1f-83f5-da40086a10f1.png",
+    "rasoi-crunch-grain-free-salmon-kibble": "/img/products/2c97d212-c8dc-4b1f-83f5-da40086a10f1.png",
     "feline-shredded-mackerel-tuna-broth": "/img/products/Pet Rasoi premium fish food pouch-1.png",
   } as Record<number | string, string>,
 };
