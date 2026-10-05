@@ -6,7 +6,7 @@ This document pack was generated on 2026-10-05. No application has been implemen
 |---|---|---|
 | 00 | PASS | Decisions aligned: Brand set to Pet Rasoi; Phase 1 scope and stack approved |
 | 01 | PASS | Foundation verified: Next.js 14 App Router, TypeScript, Tailwind, Vitest, build passing |
-| 02 | NOT STARTED | Implementation pending |
+| 02 | PASS | GoPet theme design shell and homepage complete with interactive tabs and real pouch images |
 | 03 | NOT STARTED | Implementation pending |
 | 04 | NOT STARTED | Implementation pending |
 | 05 | NOT STARTED | Implementation pending |
@@ -39,10 +39,25 @@ This document pack was generated on 2026-10-05. No application has been implemen
 - Design direction implemented: Instant ready-to-serve food focus; warm white/cream & soft sage palette; Playfair Display / Plus Jakarta Sans font pairing; centralized image mapping in `src/lib/images.ts`; neutral image placeholder for missing photography.
 - Remaining blockers: Staging WooCommerce environment for commerce integration.
 - Next ready node: Node 02 (Design shell and home)
-Dependencies checked:
-Changed files:
-Commands run and actual outcomes:
-Integration evidence:
+
+### Node 02: Design shell and home (GoPet theme)
+- Dependencies checked: Node 01 PASS
+- Changed files:
+  - `src/components/layout/Header.tsx`: GoPet top announcement bar, navigation, and cart badge.
+  - `src/components/home/Hero.tsx`: 2-column showcase with real Pet Rasoi pouch photo and 4 feature badges.
+  - `src/components/home/CategoryBanners.tsx`: GoPet dual split cards for Dog Bowls vs Cat Hydration.
+  - `src/components/home/ServingSteps.tsx`: 3-step pantry-to-bowl protocol.
+  - `src/components/home/FeaturedTabs.tsx`: Interactive category filter tabs (All, Dog, Cat, Broths & Treats).
+  - `src/components/home/NutritionPhilosophy.tsx`: GoPet kitchen nutrition standards & verified pillars.
+  - `src/components/home/BlogPreview.tsx`: Pet feeding guides and nutrition articles.
+  - `src/components/layout/Footer.tsx`: GoPet newsletter signup, 4-column directory, and trust badges.
+  - `src/lib/images.ts`: Mapped 4 real user product images from `public/img/products/`.
+- Commands run and outcomes:
+  - `npm run typecheck`: Exit code 0
+  - `npm run test`: Exit code 0 (11 unit tests passed)
+  - `npm run lint`: Exit code 0
+  - `npm run build`: Exit code 0 (Production bundle built)
+- Next ready node: Node 03 (WordPress backend bridge) or Node 05 (Catalog shop page & detail view)
 Remaining blockers:
 Next ready node:
 
