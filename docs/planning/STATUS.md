@@ -57,6 +57,13 @@ This document pack was generated on 2026-10-05. No application has been implemen
   - `npm run test`: Exit code 0 (11 unit tests passed)
   - `npm run lint`: Exit code 0
   - `npm run build`: Exit code 0 (Production bundle built)
+- Hero redesign update:
+  - Re-architected `Hero.tsx` to match user reference (Aardvark-inspired layout).
+  - Photorealistic visual with cat and golden retriever eating wholesome meal together from a ceramic bowl.
+  - Custom display typography with `Lilita One`, whisker doodles (`\ LOVE /`), and Pet Rasoi logo terracotta `#DE5925`.
+  - Pill-shaped quick CTA buttons for Dog Food, Cat Food, and Menu.
+  - Centered floating scroll-down indicator button.
+  - Sleek matching header with circular menu button, centered brand logo, and circular cart & account controls.
 - Next ready node: Node 03 (WordPress backend bridge) or Node 05 (Catalog shop page & detail view)
 Remaining blockers:
 Next ready node:
