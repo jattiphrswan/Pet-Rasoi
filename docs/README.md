@@ -1,45 +1,32 @@
-# Pet Rasoi — Documentation Index
+# 📚 Pet Rasoi — Documentation Hub
 
-Welcome to the centralized documentation hub for **Pet Rasoi** (Instant, Ready-to-Serve Wholesome Pet Food).
+Here is the complete guide for building, running, and launching **Pet Rasoi**.
 
-## 📁 Documentation Structure
-
-```text
-docs/
-├── architecture/         # System design, data contracts & commerce models
-│   ├── a.md              # System architecture, session ownership & data flow
-│   ├── API_CONTRACTS.md  # Store API & signed checkout handoff protocol
-│   └── DATA_MODEL.md     # Product taxonomies, pet nutrition & metadata schemas
-│
-├── planning/             # Requirements, roadmap & node status tracking
-│   ├── r.md              # Canonical product requirements & acceptance criteria
-│   ├── p.md              # Build plan & node dependency graph
-│   ├── DECISIONS.md      # Architectural & technical decision logs
-│   ├── STATUS.md         # Active development node status & test evidence
-│   ├── NODES.md          # Node catalog & completion criteria
-│   └── nodes/            # Dedicated briefs for Node 00 through Node 14
-│
-├── design/               # UI, theme tokens, styling & image standards
-│   └── DESIGN.md         # Warm white/cream + soft sage palette, typography & layouts
-│
-├── backend/              # WooCommerce configuration & operations
-│   ├── WORDPRESS_SETUP.md# Headless WordPress & custom PHP plugin guide
-│   ├── DEPLOYMENT.md     # Staging, production release & rollback procedures
-│   └── OPERATIONS.md     # Fulfillment, lot/batch tracking & transactional email
-│
-├── testing/              # Validation, automated testing & quality gates
-│   └── TESTING.md        # Unit, integration & Playwright E2E test plan
-│
-└── agents/               # AI pairing guidelines & scaffolding briefs
-    ├── AGENTS.md         # Antigravity coding instructions & commerce rules
-    ├── ANTIGRAVITY_PROMPT.md # Project inception prompt
-    └── SOURCES.md        # Technical references & official API links
-```
+Everything is split into easy-to-read folders so you can find whatever you need without hunting through massive files:
 
 ---
 
-## 🧭 Key References by Role
+## 🗂️ What's Inside Each Folder
 
-* **Frontend Developers**: Check [docs/design/DESIGN.md](file:///c:/Users/SkyFish/OneDrive/project/pro-ecom/docs/design/DESIGN.md) for styling tokens and [docs/architecture/DATA_MODEL.md](file:///c:/Users/SkyFish/OneDrive/project/pro-ecom/docs/architecture/DATA_MODEL.md) for product schemas.
-* **Backend / WordPress Integrators**: Refer to [docs/backend/WORDPRESS_SETUP.md](file:///c:/Users/SkyFish/OneDrive/project/pro-ecom/docs/backend/WORDPRESS_SETUP.md) and [docs/architecture/API_CONTRACTS.md](file:///c:/Users/SkyFish/OneDrive/project/pro-ecom/docs/architecture/API_CONTRACTS.md) for the secure session handoff.
-* **QA & Verification**: Follow [docs/testing/TESTING.md](file:///c:/Users/SkyFish/OneDrive/project/pro-ecom/docs/testing/TESTING.md) and record results in [docs/planning/STATUS.md](file:///c:/Users/SkyFish/OneDrive/project/pro-ecom/docs/planning/STATUS.md).
+### 1. 📐 [Architecture (`docs/architecture/`)](file:///c:/Users/SkyFish/OneDrive/project/pro-ecom/docs/architecture/)
+- [**a.md**](file:///c:/Users/SkyFish/OneDrive/project/pro-ecom/docs/architecture/a.md): High-level system design—how Next.js and WooCommerce talk to each other.
+- [**API_CONTRACTS.md**](file:///c:/Users/SkyFish/OneDrive/project/pro-ecom/docs/architecture/API_CONTRACTS.md): Cart-to-checkout handoff and API endpoints.
+- [**DATA_MODEL.md**](file:///c:/Users/SkyFish/OneDrive/project/pro-ecom/docs/architecture/DATA_MODEL.md): How products, nutrition facts, and diets are structured.
+
+### 2. 📋 [Planning & Progress (`docs/planning/`)](file:///c:/Users/SkyFish/OneDrive/project/pro-ecom/docs/planning/)
+- [**r.md**](file:///c:/Users/SkyFish/OneDrive/project/pro-ecom/docs/planning/r.md): What the store needs to do (features, goals, and rules).
+- [**p.md**](file:///c:/Users/SkyFish/OneDrive/project/pro-ecom/docs/planning/p.md): The step-by-step build roadmap.
+- [**STATUS.md**](file:///c:/Users/SkyFish/OneDrive/project/pro-ecom/docs/planning/STATUS.md): Live tracker showing what is built, tested, and passing.
+- [**DECISIONS.md**](file:///c:/Users/SkyFish/OneDrive/project/pro-ecom/docs/planning/DECISIONS.md): Key choices made during development.
+- [**nodes/**](file:///c:/Users/SkyFish/OneDrive/project/pro-ecom/docs/planning/nodes/): Quick checklists for each development stage.
+
+### 3. 🎨 [Design & Styling (`docs/design/`)](file:///c:/Users/SkyFish/OneDrive/project/pro-ecom/docs/design/)
+- [**DESIGN.md**](file:///c:/Users/SkyFish/OneDrive/project/pro-ecom/docs/design/DESIGN.md): Warm cream colors, soft sage green, typography pairing, and mobile layouts.
+
+### 4. 🔌 [Backend & Operations (`docs/backend/`)](file:///c:/Users/SkyFish/OneDrive/project/pro-ecom/docs/backend/)
+- [**WORDPRESS_SETUP.md**](file:///c:/Users/SkyFish/OneDrive/project/pro-ecom/docs/backend/WORDPRESS_SETUP.md): Setting up WooCommerce and our custom integration plugin.
+- [**DEPLOYMENT.md**](file:///c:/Users/SkyFish/OneDrive/project/pro-ecom/docs/backend/DEPLOYMENT.md): Launch checklist and staging guides.
+- [**OPERATIONS.md**](file:///c:/Users/SkyFish/OneDrive/project/pro-ecom/docs/backend/OPERATIONS.md): Order packing, batch numbers, and customer emails.
+
+### 5. 🧪 [Testing & Checks (`docs/testing/`)](file:///c:/Users/SkyFish/OneDrive/project/pro-ecom/docs/testing/)
+- [**TESTING.md**](file:///c:/Users/SkyFish/OneDrive/project/pro-ecom/docs/testing/TESTING.md): Making sure prices, cart additions, and mobile displays work every time.
