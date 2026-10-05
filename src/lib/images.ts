@@ -27,6 +27,13 @@ export const SITE_IMAGES = {
     height: 32,
   },
 
+  heroCloseUp: {
+    src: "/img/hero_aardvark.jpg",
+    alt: "Happy dog and cat eating fresh wholesome meals together",
+    width: 1920,
+    height: 1080,
+  },
+
   // Hero section image slots (3 slides from user petfoodimg folder)
   hero: {
     slides: [
