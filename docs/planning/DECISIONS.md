@@ -9,7 +9,7 @@
 | Checkout | Native WooCommerce with explicit secure cart handoff |
 | Accounts | Native WooCommerce; no custom React customer authentication at launch |
 | Inventory model | Inventory-based ready-to-serve packaged pet food |
-| Visual direction | Light & elegant: warm white/cream (#FAF9F5), soft sage green (#6B8E71), dark text, subtle borders |
+| Visual direction | Light & elegant: warm terracotta orange (#DE5925) matching official logo, warm cream (#FAF8F5), rich charcoal (#1A1A1A), subtle warm borders (#EADFD6) |
 | Typography | Stylish serif headings (Playfair Display) + clean sans body (Plus Jakarta Sans) |
 | Image system | Centralized image mapping in src/lib/images.ts using public/img/ and neutral placeholders |
 | Brand | Pet Rasoi |

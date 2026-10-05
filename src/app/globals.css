@@ -4,12 +4,13 @@
 
 @layer base {
   :root {
-    --color-cream: #faf9f5;
-    --color-cream-surface: #f4f1ea;
-    --color-sage: #6b8e71;
-    --color-sage-dark: #47664d;
-    --color-ink: #1c2420;
-    --color-border: #e5e1d6;
+    --color-cream: #faf8f5;
+    --color-cream-surface: #f5f0ea;
+    --color-brand: #de5925;
+    --color-brand-dark: #b84315;
+    --color-brand-light: #fdf2eb;
+    --color-ink: #1a1a1a;
+    --color-border: #eadfd6;
   }
 
   body {
@@ -25,9 +26,9 @@
   }
 }
 
-/* Accessibility: Visible Focus Rings using Sage Accent */
+/* Accessibility: Visible Focus Rings using Logo Orange Accent */
 :focus-visible {
-  outline: 2px solid #47664d;
+  outline: 2px solid #de5925;
   outline-offset: 2px;
 }
 
@@ -36,8 +37,8 @@
   position: absolute;
   top: -40px;
   left: 0;
-  background: #47664d;
-  color: #faf9f5;
+  background: #de5925;
+  color: #ffffff;
   padding: 8px 16px;
   font-weight: 500;
   z-index: 100;

@@ -2,11 +2,12 @@
 
 ## Proposed identity
 Brand name Pet Rasoi; focused on instant, ready-to-serve pet food. Clean, premium and friendly aesthetic.
-Colors:
-- Warm white & cream backgrounds: base #FAF9F5, surface #F4F1EA, cards #FFFFFF
-- Soft sage green accents: primary sage #6B8E71, deep forest sage #47664D, soft tint #EBF2EC
-- Dark readable text: charcoal ink #1C2420, muted ink #4A5850, subtle #75837B
-- Subtle borders: #E5E1D6 / #DCD7C9
+Colors (matched to official Pet Rasoi logo):
+- Primary Brand Terracotta: #DE5925 (exact logo circle & "Rasoi" text), deep terracotta #B84315, soft peach tint #FDF2EB
+- Warm white & cream backgrounds: base #FAF8F5, surface #F5F0EA, cards #FFFFFF
+- Deep readable text: rich charcoal #1A1A1A (matches "Pet" lettering), muted #4E4E4E (matches tagline)
+- Warm tan accent: #DCA46A (matches logo divider line)
+- Subtle borders: #EADFD6
 Validate text/background contrast for accessibility.
 
 ## Typography
