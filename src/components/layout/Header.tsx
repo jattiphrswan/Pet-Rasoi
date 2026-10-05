@@ -15,15 +15,15 @@ export function Header() {
         <span>🚚 Free fresh delivery on orders over ₹499 • Ready to serve in 10 seconds</span>
       </div>
 
-      {/* Main Header Bar (Aardvark-Style Clean Layout) */}
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 sm:px-6 lg:px-8">
+      {/* Main Header Bar (Centered Logo Layout) */}
+      <div className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8 min-h-[84px] sm:min-h-[96px]">
         {/* Left Side: Mobile Menu Button OR Desktop Nav Links */}
-        <div className="flex items-center gap-6">
-          {/* Mobile Menu Button (Only visible on small screens) */}
+        <div className="flex items-center gap-4 sm:gap-6 z-10">
+          {/* Mobile Menu Button (Visible on screens < lg) */}
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="flex md:hidden h-10 w-10 items-center justify-center rounded-full bg-[#1A1A1A] text-white shadow-xs hover:bg-black transition active:scale-95"
+            className="flex lg:hidden h-10 w-10 items-center justify-center rounded-full bg-[#1A1A1A] text-white shadow-xs hover:bg-black transition active:scale-95"
             aria-label="Toggle Navigation Menu"
             aria-expanded={mobileMenuOpen}
           >
@@ -42,7 +42,7 @@ export function Header() {
           </button>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#1A1A1A]">
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-7 text-xs font-bold uppercase tracking-wider text-[#1A1A1A]">
             <Link href="#dog-meals" className="hover:text-[#DE5925] transition py-1">
               Dog Food
             </Link>
@@ -58,20 +58,22 @@ export function Header() {
           </nav>
         </div>
 
-        {/* Center: Brand Logo */}
-        <Link href="/" className="flex items-center justify-center">
-          <Image
-            src={SITE_IMAGES.logo.src}
-            alt={SITE_IMAGES.logo.alt}
-            width={SITE_IMAGES.logo.width}
-            height={SITE_IMAGES.logo.height}
-            className="h-10 sm:h-12 w-auto object-contain"
-            priority
-          />
-        </Link>
+        {/* Absolute Dead Center: Brand Logo (Prominent & Centered) */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-auto flex items-center justify-center">
+          <Link href="/" className="flex items-center justify-center py-1">
+            <Image
+              src={SITE_IMAGES.logo.src}
+              alt={SITE_IMAGES.logo.alt}
+              width={280}
+              height={100}
+              className="h-16 sm:h-18 md:h-20 lg:h-24 w-auto object-contain transition-transform duration-200 hover:scale-105"
+              priority
+            />
+          </Link>
+        </div>
 
         {/* Right Side: Help, Avatar, and Cart Buttons */}
-        <div className="flex items-center gap-2.5 sm:gap-3">
+        <div className="flex items-center gap-2.5 sm:gap-3 z-10">
           <Link
             href="#help"
             className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#1A1A1A] hover:text-[#DE5925] transition px-2 py-1"
@@ -111,7 +113,7 @@ export function Header() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="border-t border-border bg-white px-4 py-4 md:hidden animate-in fade-in slide-in-from-top-2">
+        <div className="border-t border-border bg-white px-4 py-4 lg:hidden animate-in fade-in slide-in-from-top-2">
           <nav className="flex flex-col gap-3 font-bold text-sm uppercase tracking-wider text-[#1A1A1A]">
             <Link
               href="#dog-meals"
