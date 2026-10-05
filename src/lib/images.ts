@@ -61,8 +61,17 @@ export const SITE_IMAGES = {
   },
 
   // Per-product image overrides (ID or Slug -> path in public/img)
-  // When a user drops new images into public/img/, map them here.
-  productOverrides: {} as Record<number | string, string>,
+  // When you add new images into public/img/, map them here.
+  productOverrides: {
+    101: "/img/products/213837d0-2df8-403e-b9a1-fa018ee82fe5.png",
+    102: "/img/products/83603585-6e18-43e5-9c52-b765392d479d.png",
+    103: "/img/products/dd56b0c0-e37a-487c-89d2-dab5b76606cc.png",
+    106: "/img/products/Pet Rasoi premium fish food pouch-1.png",
+    "rasoi-fresh-farm-chicken-brown-rice": "/img/products/213837d0-2df8-403e-b9a1-fa018ee82fe5.png",
+    "tender-mutton-sweet-potato-feast": "/img/products/83603585-6e18-43e5-9c52-b765392d479d.png",
+    "puppy-growth-nourish-bowl": "/img/products/dd56b0c0-e37a-487c-89d2-dab5b76606cc.png",
+    "feline-shredded-mackerel-tuna-broth": "/img/products/Pet Rasoi premium fish food pouch-1.png",
+  } as Record<number | string, string>,
 };
 
 /**
