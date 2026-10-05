@@ -54,7 +54,7 @@ describe("Catalog Filtering - filterProducts", () => {
   it("filters out of stock items when inStockOnly is active", () => {
     const inStock = filterProducts(DEMO_PRODUCTS, { inStockOnly: true });
     expect(inStock.every((p) => p.inStock)).toBe(true);
-    expect(inStock.some((p) => p.id === 112)).toBe(false); // 112 is out of stock in demo data
+    expect(inStock.some((p) => p.id === 104)).toBe(false); // 104 is out of stock in demo data
   });
 
   it("filters by text search across title and ingredients", () => {

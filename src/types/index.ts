@@ -1,4 +1,4 @@
-export type PetType = "dog" | "cat";
+export type PetType = "dog" | "cat" | "bird";
 
 export type LifeStage = "puppy-kitten" | "adult" | "senior";
 
