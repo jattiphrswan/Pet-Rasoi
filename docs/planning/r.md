@@ -1,7 +1,7 @@
 # Requirements
 
 ## Goal and boundaries
-Sell packaged pet food with clear nutrition information, trustworthy product data and easy repeat purchases. Phase 1 supports an inventory-based retail workflow as a provisional assumption; stock ownership must be confirmed before live launch. Brand name: Pet Rasoi.
+Sell instant, ready-to-serve packaged pet food with clear nutrition information, trustworthy product data and easy repeat purchases. Emphasize convenience, effortless serving (open and serve), fresh wholesome ingredients and verified product details. Never invent ingredients, preparation instructions, certifications or health claims. Phase 1 supports an inventory-based retail workflow as a provisional assumption; stock ownership must be confirmed before live launch. Brand name: Pet Rasoi.
 
 Country, currency, shipping zones, taxation, legal text, provider, domain, catalog and supplier certifications remain business decisions. Do not silently default the real store to US or India. Demo configuration may use clearly labelled sample INR prices; live amounts and currency always come from WooCommerce.
 

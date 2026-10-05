@@ -8,8 +8,10 @@
 | Database | Existing WordPress database; no duplicate Node commerce DB |
 | Checkout | Native WooCommerce with explicit secure cart handoff |
 | Accounts | Native WooCommerce; no custom React customer authentication at launch |
-| Inventory model | Inventory-based provisional assumption |
-| Visual direction | Forest green/cream provisional theme |
+| Inventory model | Inventory-based ready-to-serve packaged pet food |
+| Visual direction | Light & elegant: warm white/cream (#FAF9F5), soft sage green (#6B8E71), dark text, subtle borders |
+| Typography | Stylish serif headings (Playfair Display) + clean sans body (Plus Jakarta Sans) |
+| Image system | Centralized image mapping in src/lib/images.ts using public/img/ and neutral placeholders |
 | Brand | Pet Rasoi |
 | Demo | Labelled sample data, commerce disabled |
 | Currency | Live WooCommerce setting; sample INR only in demo |
