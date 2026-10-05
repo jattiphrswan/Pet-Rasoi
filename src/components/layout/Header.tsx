@@ -15,30 +15,46 @@ export function Header() {
         <span>🚚 Free fresh delivery on orders over ₹499 • Ready to serve in 10 seconds</span>
       </div>
 
-      {/* Main Header Bar (Aardvark-Style Layout) */}
+      {/* Main Header Bar (Aardvark-Style Clean Layout) */}
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 sm:px-6 lg:px-8">
-        {/* Left Side: Circular Menu Button & Desktop Nav */}
-        <div className="flex items-center gap-4">
+        {/* Left Side: Mobile Menu Button OR Desktop Nav Links */}
+        <div className="flex items-center gap-6">
+          {/* Mobile Menu Button (Only visible on small screens) */}
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-[#1A1A1A] text-white shadow-xs hover:bg-black transition active:scale-95"
+            className="flex md:hidden h-10 w-10 items-center justify-center rounded-full bg-[#1A1A1A] text-white shadow-xs hover:bg-black transition active:scale-95"
             aria-label="Toggle Navigation Menu"
             aria-expanded={mobileMenuOpen}
           >
-            {/* 2 horizontal bars (Aardvark style) */}
             <div className="flex flex-col gap-1.5 items-center justify-center w-4">
-              <span className={`h-0.5 w-4 bg-white rounded-full transition-transform ${mobileMenuOpen ? "rotate-45 translate-y-1" : ""}`} />
-              <span className={`h-0.5 w-4 bg-white rounded-full transition-transform ${mobileMenuOpen ? "-rotate-45 -translate-y-1" : ""}`} />
+              <span
+                className={`h-0.5 w-4 bg-white rounded-full transition-transform ${
+                  mobileMenuOpen ? "rotate-45 translate-y-1" : ""
+                }`}
+              />
+              <span
+                className={`h-0.5 w-4 bg-white rounded-full transition-transform ${
+                  mobileMenuOpen ? "-rotate-45 -translate-y-1" : ""
+                }`}
+              />
             </div>
           </button>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-6 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#1A1A1A]">
-            <Link href="#dog-meals" className="hover:text-[#DE5925] transition">Dog Food</Link>
-            <Link href="#cat-meals" className="hover:text-[#DE5925] transition">Cat Food</Link>
-            <Link href="#shop" className="hover:text-[#DE5925] transition">All Recipes</Link>
-            <Link href="#philosophy" className="hover:text-[#DE5925] transition">Nutrition</Link>
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#1A1A1A]">
+            <Link href="#dog-meals" className="hover:text-[#DE5925] transition py-1">
+              Dog Food
+            </Link>
+            <Link href="#cat-meals" className="hover:text-[#DE5925] transition py-1">
+              Cat Food
+            </Link>
+            <Link href="#shop" className="hover:text-[#DE5925] transition py-1">
+              All Recipes
+            </Link>
+            <Link href="#philosophy" className="hover:text-[#DE5925] transition py-1">
+              Nutrition
+            </Link>
           </nav>
         </div>
 
@@ -79,7 +95,12 @@ export function Header() {
             className="relative flex h-10 w-10 items-center justify-center rounded-full bg-[#1A1A1A] text-white shadow-xs hover:bg-black transition active:scale-95"
           >
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+              />
             </svg>
             <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-[#DE5925] text-[10px] font-bold text-white border-2 border-white">
               0
@@ -90,7 +111,7 @@ export function Header() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="border-t border-border bg-white px-4 py-4 sm:hidden animate-in fade-in slide-in-from-top-2">
+        <div className="border-t border-border bg-white px-4 py-4 md:hidden animate-in fade-in slide-in-from-top-2">
           <nav className="flex flex-col gap-3 font-bold text-sm uppercase tracking-wider text-[#1A1A1A]">
             <Link
               href="#dog-meals"

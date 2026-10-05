@@ -24,7 +24,7 @@ export function Hero() {
             className="object-cover object-left"
             sizes="100vw"
           />
-          {/* Soft warm right-side gradient to blend seamlessly into typography canvas */}
+          {/* Soft warm right-side gradient overlay to ensure crystal-clear text contrast */}
           <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/60 to-transparent sm:bg-gradient-to-r sm:from-transparent sm:via-white/20 sm:to-[#FAF8F5]/90 lg:from-transparent lg:via-[#FAF8F5]/30 lg:to-[#FAF8F5]/95" />
         </div>
 
@@ -32,24 +32,27 @@ export function Hero() {
         <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-12 flex justify-end">
           <div className="w-full sm:max-w-md lg:max-w-lg text-center sm:text-left">
             {/* Top Pill Tag */}
-            <div className="inline-flex items-center gap-1.5 rounded-full bg-[#DE5925]/10 px-4 py-1 text-xs font-bold uppercase tracking-wider text-[#DE5925] border border-[#DE5925]/20 mb-3">
-              <span>🍲 Ghar Ka Khana • Ready To Serve</span>
+            <div className="inline-flex items-center gap-1.5 rounded-full bg-white/90 backdrop-blur-xs px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#DE5925] border border-[#DE5925]/30 shadow-xs mb-3">
+              <span>🍲 Ghar Ka Khana • 100% Ready To Serve</span>
             </div>
 
-            {/* Playful & Bold Aardvark Typography with Lilita One Font */}
-            <div className="font-display uppercase tracking-wider text-[#DE5925] leading-[0.92]">
-              <div className="text-4xl sm:text-5xl lg:text-6xl drop-shadow-xs">
+            {/* Playful & Bold High-Contrast Typography */}
+            <div className="font-display uppercase tracking-wider leading-[0.92]">
+              {/* "FOR" in Deep Charcoal Black */}
+              <div className="text-4xl sm:text-5xl lg:text-6xl text-[#1A1A1A] drop-shadow-xs">
                 FOR
               </div>
-              <div className="text-4xl sm:text-5xl lg:text-6xl drop-shadow-xs mt-1">
+
+              {/* "PETS THAT" in Deep Charcoal Black */}
+              <div className="text-4xl sm:text-5xl lg:text-6xl text-[#1A1A1A] drop-shadow-xs mt-1">
                 PETS THAT
               </div>
 
-              {/* Central "LOVE" with Cute Whisker Doodles */}
-              <div className="my-1.5 inline-flex items-center justify-center sm:justify-start gap-2 sm:gap-3">
+              {/* Central "LOVE" in Vibrant Brand Terracotta with Playful Whisker Doodles */}
+              <div className="my-2 inline-flex items-center justify-center sm:justify-start gap-2 sm:gap-3">
                 {/* Left Whisker Doodle (3 playful blue arcs) */}
                 <svg
-                  className="w-8 h-8 sm:w-11 sm:h-11 text-sky-400 stroke-current -rotate-6"
+                  className="w-8 h-8 sm:w-11 sm:h-11 text-sky-500 stroke-current -rotate-6"
                   viewBox="0 0 40 40"
                   fill="none"
                   aria-hidden="true"
@@ -59,14 +62,14 @@ export function Hero() {
                   <path d="M34 30C26 33 14 34 6 36" strokeWidth="3.5" strokeLinecap="round" />
                 </svg>
 
-                {/* Big LOVE Wordmark */}
+                {/* Big Vibrant LOVE Wordmark */}
                 <span className="text-6xl sm:text-7xl lg:text-8xl tracking-normal text-[#DE5925] drop-shadow-md">
                   LOVE
                 </span>
 
                 {/* Right Whisker Doodle (3 playful blue arcs) */}
                 <svg
-                  className="w-8 h-8 sm:w-11 sm:h-11 text-sky-400 stroke-current rotate-6"
+                  className="w-8 h-8 sm:w-11 sm:h-11 text-sky-500 stroke-current rotate-6"
                   viewBox="0 0 40 40"
                   fill="none"
                   aria-hidden="true"
@@ -77,13 +80,15 @@ export function Hero() {
                 </svg>
               </div>
 
+              {/* "REAL FOOD" Two-Tone Contrast */}
               <div className="text-4xl sm:text-5xl lg:text-6xl drop-shadow-xs mt-1">
-                REAL FOOD
+                <span className="text-[#1A1A1A]">REAL </span>
+                <span className="text-[#DE5925]">FOOD</span>
               </div>
             </div>
 
             {/* Subtitle Description */}
-            <p className="mt-4 text-sm sm:text-base text-[#2D2A26] font-medium leading-relaxed max-w-md">
+            <p className="mt-4 text-sm sm:text-base text-[#3D352E] font-medium leading-relaxed max-w-md">
               Gently steam-cooked human-grade meals for dogs and cats.
               Wholesome kitchen nutrition, balanced with farm veggies—open, pour, and ready in 10 seconds.
             </p>
