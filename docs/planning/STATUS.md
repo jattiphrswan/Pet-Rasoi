@@ -7,7 +7,7 @@ This document pack was generated on 2026-10-05. No application has been implemen
 | 00 | PASS | Decisions aligned: Brand set to Pet Rasoi; Phase 1 scope and stack approved |
 | 01 | PASS | Foundation verified: Next.js 14 App Router, TypeScript, Tailwind, Vitest, build passing |
 | 02 | PASS | GoPet theme design shell and homepage complete with interactive tabs and real pouch images |
-| 03 | NOT STARTED | Implementation pending |
+| 03 | BLOCKED | PHP bridge plugin scaffolded and syntax verified; awaiting live staging WooCommerce URL and credentials |
 | 04 | NOT STARTED | Implementation pending |
 | 05 | NOT STARTED | Implementation pending |
 | 06 | NOT STARTED | Implementation pending |
@@ -65,7 +65,27 @@ This document pack was generated on 2026-10-05. No application has been implemen
   - Centered floating scroll-down indicator button.
   - Sleek matching header with circular menu button, centered brand logo, and circular cart & account controls.
 - Next ready node: Node 03 (WordPress backend bridge) or Node 05 (Catalog shop page & detail view)
-Remaining blockers:
-Next ready node:
+
+### Node 03: WordPress backend
+- Dependencies checked: Node 01 PASS
+- Status: BLOCKED (Awaiting live staging WooCommerce instance)
+- Implementation completed:
+  - Created complete headless integration plugin in `wordpress/petfood-headless/`.
+  - Registered pet food metadata schemas (`petfood_ingredients`, `petfood_analysis`, `petfood_calories`, `petfood_feeding_rows`, `petfood_storage`, `petfood_origin`, `petfood_certifications`) with sanitization and authorization callbacks.
+  - Added WooCommerce product data panel tab "Pet Food Nutrition" for admin management.
+  - Exposed public nutrition REST endpoint `GET /wp-json/petfood/v1/products/{id}/nutrition` with schema validation and draft/private product protection.
+  - Built secure server-to-server HMAC signed handoff generation endpoint `POST /wp-json/petfood/v1/handoffs` with replay protection (nonce transient) and 120-second TTL.
+  - Built interstitial GET landing page and POST consumption flow with atomic token deletion and native WooCommerce cart reconstruction.
+  - Documented setup and configuration in `wordpress/petfood-headless/README.md`.
+- Commands run and outcomes:
+  - `php -l wordpress/petfood-headless/petfood-headless.php`: Exit code 0 (No syntax errors)
+  - `php -l wordpress/petfood-headless/includes/metadata.php`: Exit code 0 (No syntax errors)
+  - `php -l wordpress/petfood-headless/includes/nutrition-api.php`: Exit code 0 (No syntax errors)
+  - `php -l wordpress/petfood-headless/includes/handoff.php`: Exit code 0 (No syntax errors)
+- Blockers: Missing active staging WooCommerce host, credentials, and API access to test live retrieval and publishing gate. Per AGENTS.md rules, missing staging = BLOCKED rather than mocked PASS.
+- Next ready node: Node 04 / Node 05 (Catalog shop page, filters, and product detail view in demo-supported mode).
+
+Remaining blockers: Active staging WordPress/WooCommerce instance for end-to-end commerce bridge verification.
+Next ready node: Node 04 (Catalog and content adapters) & Node 05 (Shop and product pages)
 
 Use PASS only when the node's required checks actually pass. Use BLOCKED for missing backend/business configuration and keep independent work moving.
